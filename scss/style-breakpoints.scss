@@ -1,0 +1,36 @@
+@import "mixins";
+@import "variables";
+
+@media (min-width: 375px) {
+  .wrapper h1 {
+    font-size: $headline;
+  }
+  .slider {
+    .slider-item a {
+      font-size: $big;
+    }
+
+    .slick-slide {
+      img {
+        width: 100% !important;
+        border-radius: 8px;
+      }
+
+      div {
+        margin: 8px 0;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .slider {
+    .slick-slide {
+      margin: 0 20px;
+
+      div {
+        margin: 40px 0;
+      }
+    }
+  }
+}

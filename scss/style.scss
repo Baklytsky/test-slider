@@ -1,0 +1,110 @@
+@import "mixins";
+@import "variables";
+
+body {
+  background-color: $body-bg;
+}
+
+//**************************************WRAPPER************************************
+
+.wrapper {
+  max-width: 1140px;
+  padding: 70px 0 40px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: $big;
+    padding: 20px 16px;
+  }
+}
+
+//**************************************SLIDER***************************************
+
+.slider {
+  .slider-item {
+    position: relative;
+
+    img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    a {
+      font-size: $normal;
+      color: $white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, transparent 0%, $body-bg 100%);
+      padding: 24px;
+    }
+  }
+
+  .slick-slide {
+    margin: 8px;
+  }
+
+  //**************************************NEXT*PREV*BTN**********************************
+
+  .slick-prev, .slick-next {
+    top: 110%;
+    z-index: 1;
+
+    &:before {
+      font-family: "untitled-font-1", sans-serif;
+      color: $white;
+      padding: 10px;
+      border-radius: 50%;
+      border: 2px solid darken($white, 80%);
+    }
+
+    &:hover {
+      &:before {
+        color: $orange;
+      }
+    }
+  }
+
+  .slick-next {
+    right: 40%;
+
+    &:before {
+      content: '\e00e';
+    }
+  }
+
+  .slick-prev {
+    left: 40%;
+    transform: translate(-100%, -50%);
+
+    &:before {
+      content: '\e00f';
+    }
+  }
+
+  //**************************************DOTS********************************************
+
+  .slick-dots {
+    bottom: -10%;
+    transform: translateY(20%);
+
+    li {
+      width: 10px;
+      height: 10px;
+    }
+
+    li.slick-active button:before {
+      font-size: 10px;
+      color: $white;
+    }
+
+    li button:before {
+      font-size: 6px;
+      color: $white;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}
+
